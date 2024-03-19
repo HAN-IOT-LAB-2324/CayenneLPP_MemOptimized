@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Initialize-example" kind="example">
+    <compoundname>Initialize</compoundname>
+    <briefdescription>
+<para>Constructor, this class is now a template class and supposed to be initialized with template syntax. like this: CayenneLPP::CayenneLPP&lt;100&gt; enc_inst; Please note that this reserves a buffer of 100 bytes, you are free to go higher or lower, but keep in mind that a GPS measurement is the largest measurement and takes atleast 11-bytes to store. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Constructor, this class is now a template class and supposed to be initialized with template syntax. like this: CayenneLPP::CayenneLPP&lt;100&gt; enc_inst; Please note that this reserves a buffer of 100 bytes, you are free to go higher or lower, but keep in mind that a GPS measurement is the largest measurement and takes atleast 11-bytes to store. <programlisting filename="Initialize"></programlisting> </para>
+    </detaileddescription>
+    <location file="src/CayenneLPP.hpp"/>
+  </compounddef>
+</doxygen>

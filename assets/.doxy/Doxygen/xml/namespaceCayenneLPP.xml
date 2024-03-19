@@ -1,0 +1,1020 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespaceCayenneLPP" kind="namespace" language="C++">
+    <compoundname>CayenneLPP</compoundname>
+    <innerclass refid="classCayenneLPP_1_1CayenneLPP" prot="public">CayenneLPP::CayenneLPP</innerclass>
+    <innerclass refid="structCayenneLPP_1_1GyroVal__t" prot="public">CayenneLPP::GyroVal_t</innerclass>
+    <innerclass refid="structCayenneLPP_1_1AcceleroVal__t" prot="public">CayenneLPP::AcceleroVal_t</innerclass>
+    <innerclass refid="structCayenneLPP_1_1GPSCoord__t" prot="public">CayenneLPP::GPSCoord_t</innerclass>
+    <innerclass refid="unionCayenneLPP_1_1MeasurementData__t" prot="public">CayenneLPP::MeasurementData_t</innerclass>
+    <innerclass refid="structCayenneLPP_1_1Measurement__t" prot="public">CayenneLPP::Measurement_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CayenneMeasurementType_t</name>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a6b3b8985b9b23945a4fede04c4215a1c" prot="public">
+          <name>MEASUREMENT_TYPE_INVALID</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a1e7af3faabc659da88340d40062769ee" prot="public">
+          <name>MEASUREMENT_TYPE_DIGITAL_OUTPUT</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ab76608c6e1f8286991e23250af8a51e4" prot="public">
+          <name>MEASUREMENT_TYPE_DIGITAL_INPUT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a385a04204afc96be0887492a012444b0" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBIT_1</name>
+          <initializer>= 116</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a39720a40a425f3ec8ca06b0e9f8fe92c" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBIT_2</name>
+          <initializer>= 117</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7aca2cf496c7a75d2c0a3bc09b200ad766" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBIT_3</name>
+          <initializer>= 118</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a9e6ebca7b286b6e50c2e403f40a7cf3e" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBIT_4</name>
+          <initializer>= 119</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a3ea6ef175a905085ccf43d35e0aa7253" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBIT_5</name>
+          <initializer>= 120</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a45f75b27d82833ec7383496baf6a7df0" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBIT_6</name>
+          <initializer>= 121</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ad005a68c079dcee2f2e941baaad4e8cf" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBIT_7</name>
+          <initializer>= 122</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a65104d48b0c5d1e72ce29fdfd4ac8b2b" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBIT_8</name>
+          <initializer>= 123</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ad7ce99520c2c18d408b4bf5f33465a4b" prot="public">
+          <name>MEASUREMENT_TYPE_RAWBYTE</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ae8980a9932a1a6bd507bb9ea0d26df16" prot="public">
+          <name>MEASUREMENT_TYPE_RAWWORD16</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a485b72a7ac8345e5e5ea04f9c96f1b49" prot="public">
+          <name>MEASUREMENT_TYPE_RAWWORD32</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a40c0aa13fdf00bc5e8cdf349b9767fdc" prot="public">
+          <name>MEASUREMENT_TYPE_RAWFLOAT32</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ad6605f404a318211aa72b1c43690a317" prot="public">
+          <name>MEASUREMENT_TYPE_PRESENCE</name>
+          <initializer>= 102</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ab02f1240cf6ffda8a1d203ca6e0e3a93" prot="public">
+          <name>MEASUREMENT_TYPE_LUMINOSITY</name>
+          <initializer>= 101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ac9f5b987acf68c19cab29af5aa898e84" prot="public">
+          <name>MEASUREMENT_TYPE_ANALOG_OUTPUT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ae02114262d8c8f3dafdb16f56ef9aff1" prot="public">
+          <name>MEASUREMENT_TYPE_ANALOG_INPUT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a8e345bb302b1ca9a8ab423d0a9b9da21" prot="public">
+          <name>MEASUREMENT_TYPE_TEMPERATURE</name>
+          <initializer>= 103</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7ac143b6f817444846ed3ff4ed48cc6b9b" prot="public">
+          <name>MEASUREMENT_TYPE_RELATIVE_HUMIDITY</name>
+          <initializer>= 104</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a31b03d1163b26313b89909128fee88a6" prot="public">
+          <name>MEASUREMENT_TYPE_BAROMETRIC_PRESSURE</name>
+          <initializer>= 115</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a8d3600454e03dfce96d1ee1de85e6c38" prot="public">
+          <name>MEASUREMENT_TYPE_ACCELERATION</name>
+          <initializer>= 113</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a26d968dcb3c337dc958ebb6e95c42677" prot="public">
+          <name>MEASUREMENT_TYPE_GYRO</name>
+          <initializer>= 134</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CayenneTypes_8hpp_1ae3964c43b0e76c6b02efbf2df8b655d7a79691973e4f17acca0d79ffcbd362862" prot="public">
+          <name>MEASUREMENT_TYPE_GPS</name>
+          <initializer>= 136</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="162" column="5" bodyfile="src/CayenneTypes.hpp" bodystart="163" bodyend="189"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1a5594e1ba71a107721fa0090ea65a2570" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t CayenneLPP::RawByteVal_t</definition>
+        <argsstring></argsstring>
+        <name>RawByteVal_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents a raw byte value, typically used for byte-oriented data operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="47" column="21" bodyfile="src/CayenneTypes.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1aef3ae8d862153f238e47a5c5d705b7ad" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t CayenneLPP::RawBitVal_t</definition>
+        <argsstring></argsstring>
+        <name>RawBitVal_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents a single bit value, often used in bit manipulation or status indication. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="52" column="21" bodyfile="src/CayenneTypes.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1aed369f07c1b287e52e48d25df6ad7b5e" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t CayenneLPP::Word16Val_t</definition>
+        <argsstring></argsstring>
+        <name>Word16Val_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="55" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1a6d9465a09fa010f433def77542892cbd" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t CayenneLPP::Word32Val_t</definition>
+        <argsstring></argsstring>
+        <name>Word32Val_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="60" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1aeebab48dcff6ae31dc4277fda6e22f22" prot="public" static="no">
+        <type>float</type>
+        <definition>typedef float CayenneLPP::Float32Val_t</definition>
+        <argsstring></argsstring>
+        <name>Float32Val_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="65" column="19" bodyfile="src/CayenneTypes.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1ab7474579f5093ad744b5ff532773d48f" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t CayenneLPP::DigitalGPIOVal_t</definition>
+        <argsstring></argsstring>
+        <name>DigitalGPIOVal_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="70" column="21" bodyfile="src/CayenneTypes.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1a5541d0ad5746f7d7c14c6dbd4844fbbd" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t CayenneLPP::PresenceVal_t</definition>
+        <argsstring></argsstring>
+        <name>PresenceVal_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="75" column="21" bodyfile="src/CayenneTypes.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1aee24150c8c2257dd8e140dfa3e862e26" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t CayenneLPP::LuminosityVal_t</definition>
+        <argsstring></argsstring>
+        <name>LuminosityVal_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="80" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1a80a4b4d2ce609b12a7e4927feffaba3b" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t CayenneLPP::AnalogGPIOVal_t</definition>
+        <argsstring></argsstring>
+        <name>AnalogGPIOVal_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="85" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1a0507cc0683a71306144d4b97c0b7724a" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t CayenneLPP::TemperatureVal_t</definition>
+        <argsstring></argsstring>
+        <name>TemperatureVal_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="90" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1a6bd6e6bfd02c01dc4a7317a941c9f1d4" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t CayenneLPP::RelativeHumidity_t</definition>
+        <argsstring></argsstring>
+        <name>RelativeHumidity_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="95" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="CayenneTypes_8hpp_1acdde806735cdf36401a9fb3c3e67bf60" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t CayenneLPP::BarometricPressure_t</definition>
+        <argsstring></argsstring>
+        <name>BarometricPressure_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="100" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="CayenneTypes_8hpp_1afc3c6c3f9ee623b0eaa6dda56957a172" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::ResetMeasurement</definition>
+        <argsstring>()</argsstring>
+        <name>ResetMeasurement</name>
+        <briefdescription>
+<para>Clears currently used Measurement struct with invalid data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with invalid data </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="203" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="203" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a65fa79c30ee4ba6689a6943296b7508d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetDigitalOutput</definition>
+        <argsstring>(const uint8_t digital_output_val)</argsstring>
+        <name>SetDigitalOutput</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>digital_output_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the digital output value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with the given digital output value and sets the measurement type to MEASUREMENT_TYPE_DIGITAL_OUTPUT. It is designed to be used for configuring or controlling digital output pins in hardware abstraction layers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>digital_output_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The digital output value to set. This value is typically used to control a digital output, such as setting a pin high (1) or low (0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the digital output value and the type set to MEASUREMENT_TYPE_DIGITAL_OUTPUT. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="221" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="221" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a19f45df5b50ca62a8a8a56829191b983" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetDigitalInput</definition>
+        <argsstring>(const uint8_t digital_input_val)</argsstring>
+        <name>SetDigitalInput</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>digital_input_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the digital input value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with the given digital input value and sets the measurement type to MEASUREMENT_TYPE_DIGITAL_INPUT. It is primarily used for capturing or simulating the state of digital input pins in hardware abstraction layers.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>digital_input_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The digital input value to set. This value is typically used to represent the state of a digital input, such as reading a pin as high (1) or low (0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the digital input value and the type set to MEASUREMENT_TYPE_DIGITAL_INPUT. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="239" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="239" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1aebcec44dfa9193f3f0622a1b98e750d7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetPresence</definition>
+        <argsstring>(const uint8_t presence_val)</argsstring>
+        <name>SetPresence</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>presence_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the presence value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with the given presence value and sets the measurement type to MEASUREMENT_TYPE_PRESENCE. It is designed to be used for representing the presence or absence of an object or entity, typically detected through sensors.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>presence_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The presence value to set. This value is typically used to indicate the detection of presence (1) or absence (0) of an entity. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the presence value and the type set to MEASUREMENT_TYPE_PRESENCE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="258" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="258" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a781eadfc05d7ac8a46412f0dde793c1c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetLuminosity</definition>
+        <argsstring>(const float luminosity_val)</argsstring>
+        <name>SetLuminosity</name>
+        <param>
+          <type>const float</type>
+          <declname>luminosity_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the luminosity value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with the given luminosity value and sets the measurement type to MEASUREMENT_TYPE_LUMINOSITY. It is primarily used for monitoring or simulating light intensity levels in various applications, ranging from environmental sensing to smart lighting control.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>luminosity_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The luminosity value to set. This value typically represents the intensity of light measured, using a specific unit such as lux. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the luminosity value and the type set to MEASUREMENT_TYPE_LUMINOSITY. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="277" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="277" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1ab0d58901b3fd8e47065aefc91d3b6d29" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetAnalogOutput</definition>
+        <argsstring>(const float analog_output_val)</argsstring>
+        <name>SetAnalogOutput</name>
+        <param>
+          <type>const float</type>
+          <declname>analog_output_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the analog output value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a scaled analog output value and sets the measurement type to MEASUREMENT_TYPE_ANALOG_OUTPUT. The analog output value is scaled by a factor of 100 to convert it from a float to a uint16_t for digital representation. It is designed for controlling analog output devices or interfaces.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analog_output_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The analog output value to set, as a floating-point number. This value is scaled by 100 to facilitate digital representation without losing precision. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the scaled analog output value and the type set to MEASUREMENT_TYPE_ANALOG_OUTPUT. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="297" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="297" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a88460f9035e61e968be2df966523b21f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetAnalogInput</definition>
+        <argsstring>(const float analog_input_val)</argsstring>
+        <name>SetAnalogInput</name>
+        <param>
+          <type>const float</type>
+          <declname>analog_input_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the analog input value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a scaled analog input value and sets the measurement type to MEASUREMENT_TYPE_ANALOG_INPUT. The analog input value is scaled by a factor of 100 to convert it from a float to a uint16_t for digital representation. It is used for capturing or simulating analog sensor readings.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>analog_input_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The analog input value to set, as a floating-point number. This value is scaled by 100 to facilitate digital representation without losing precision. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the scaled analog input value and the type set to MEASUREMENT_TYPE_ANALOG_INPUT. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="317" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="317" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1abd40a4c63718c817b12d88837c91e656" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetTemperature</definition>
+        <argsstring>(const float temperature_val)</argsstring>
+        <name>SetTemperature</name>
+        <param>
+          <type>const float</type>
+          <declname>temperature_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the temperature value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a scaled temperature value and sets the measurement type to MEASUREMENT_TYPE_TEMPERATURE. The temperature value is scaled by a factor of 10 to convert it from a float to a uint16_t, allowing for a fraction of a degree precision in digital representation. It is used for temperature monitoring applications.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The temperature value to set, as a floating-point number. This value is scaled by 10 to provide a precision of 0.1 degrees in its digital form. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the scaled temperature value and the type set to MEASUREMENT_TYPE_TEMPERATURE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="338" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="338" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1ad6d74b36da82e2e900ea90709f5cef47" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetRelativeHumidity</definition>
+        <argsstring>(const float humidity_val)</argsstring>
+        <name>SetRelativeHumidity</name>
+        <param>
+          <type>const float</type>
+          <declname>humidity_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the relative humidity value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a scaled relative humidity value and sets the measurement type to MEASUREMENT_TYPE_RELATIVE_HUMIDITY. The humidity value is scaled by a factor of 2 to convert it from a float to a uint16_t, aiming to maintain precision while accommodating the data type. It is used for humidity monitoring in environmental control systems.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>humidity_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The relative humidity value to set, as a floating-point number. This value is scaled by 2 to adjust for the digital representation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the scaled relative humidity value and the type set to MEASUREMENT_TYPE_RELATIVE_HUMIDITY. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="359" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="359" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a4e0beb879fb8a53fde8e14f946213ec2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetBarometricPressure</definition>
+        <argsstring>(const float barometric_pressure_val)</argsstring>
+        <name>SetBarometricPressure</name>
+        <param>
+          <type>const float</type>
+          <declname>barometric_pressure_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets the barometric pressure value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a scaled barometric pressure value and sets the measurement type to MEASUREMENT_TYPE_BAROMETRIC_PRESSURE. The pressure value is scaled by a factor of 10 to convert it from a float to a uint16_t, providing a precision of 0.1 hPa (hectopascals) in its digital representation. It is used for atmospheric pressure monitoring in weather stations or environmental monitoring systems.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>barometric_pressure_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The barometric pressure value to set, as a floating-point number. This value is scaled by 10 to provide a precision of 0.1 hPa. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the scaled barometric pressure value and the type set to MEASUREMENT_TYPE_BAROMETRIC_PRESSURE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="380" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="380" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a045a757cd3c727c1283d6a11f4783607" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetAcceleration</definition>
+        <argsstring>(const float x, const float y, const float z)</argsstring>
+        <name>SetAcceleration</name>
+        <param>
+          <type>const float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Sets the acceleration values for the x, y, and z axes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with scaled acceleration values and sets the measurement type to MEASUREMENT_TYPE_ACCELERATION. The acceleration values are scaled by a factor of 1000 to convert them from floats to uint16_t, providing milli-g precision in their digital representation. It is used for capturing or simulating acceleration in various axes, typically in motion or orientation detection applications.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The acceleration value along the x-axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The acceleration value along the y-axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The acceleration value along the z-axis. These values are scaled by 1000 for precise milli-g representation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the scaled acceleration values and the type set to MEASUREMENT_TYPE_ACCELERATION. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="403" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="403" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a850f6be81007853c97c9d47c60598305" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetGyro</definition>
+        <argsstring>(const float x, const float y, const float z)</argsstring>
+        <name>SetGyro</name>
+        <param>
+          <type>const float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Sets the gyroscopic values for the x, y, and z axes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with scaled gyroscopic values and sets the measurement type to MEASUREMENT_TYPE_GYRO. The gyro values are scaled by a factor of 100 to convert them from floats to uint16_t, aiming to maintain precision for angular velocity measurements. It is typically used in orientation and rotation detection systems.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gyro value along the x-axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gyro value along the y-axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The gyro value along the z-axis. These values are scaled by 100 for digital representation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the scaled gyro values and the type set to MEASUREMENT_TYPE_GYRO. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="426" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="426" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a0aaa238a36422dd1c9ad40569c95701a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetGPS</definition>
+        <argsstring>(const float latitude, const float longitude, const float altitude)</argsstring>
+        <name>SetGPS</name>
+        <param>
+          <type>const float</type>
+          <declname>latitude</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>longitude</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>altitude</declname>
+        </param>
+        <briefdescription>
+<para>Sets the GPS coordinates and altitude. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with scaled GPS coordinate and altitude values and sets the measurement type to MEASUREMENT_TYPE_GPS. The latitude and longitude values are scaled by a factor of 10000, and the altitude by 100, converting them from floats to uint32_t for precise geographic positioning. It is used for tracking and navigation applications.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>latitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The latitude value in degrees. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>longitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The longitude value in degrees. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>altitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The altitude value in meters. The latitude and longitude are scaled by 10000, and altitude by 100, for precise representation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the scaled GPS values and the type set to MEASUREMENT_TYPE_GPS. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="448" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="448" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1ab6f31d0dc27b1b455e4d1e5d89a63b60" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CayenneLPP::SetRawBit</definition>
+        <argsstring>(const uint8_t raw_bit_val, Measurement_t *prevMeasurement)</argsstring>
+        <name>SetRawBit</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>raw_bit_val</declname>
+        </param>
+        <param>
+          <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> *</type>
+          <declname>prevMeasurement</declname>
+        </param>
+        <briefdescription>
+<para>Sets a raw bit value in a measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the provided measurement with a new bit value, setting or appending it based on the previous measurement&apos;s type. It is used to incrementally build up a raw bit measurement from individual bits.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>raw_bit_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The raw bit value to set or append. Only the least significant bit is used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prevMeasurement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the previous measurement which will be updated with the new bit value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="470" column="24" bodyfile="src/CayenneTypes.hpp" bodystart="470" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1aa7ce1edca257aadd4ec835a1b7717ed2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetRawByte</definition>
+        <argsstring>(const uint8_t raw_byte_val)</argsstring>
+        <name>SetRawByte</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>raw_byte_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets a raw byte value in a measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a raw byte value and sets the measurement type to MEASUREMENT_TYPE_RAWBYTE. It is used for handling raw byte data in various data communication or storage scenarios.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>raw_byte_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The raw byte value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the raw byte value and the type set to MEASUREMENT_TYPE_RAWBYTE. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="498" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="498" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a186a0084c1c1a86260c3472f38fdecec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetWord16</definition>
+        <argsstring>(const uint16_t word16_val)</argsstring>
+        <name>SetWord16</name>
+        <param>
+          <type>const uint16_t</type>
+          <declname>word16_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets a 16-bit word value in a measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a 16-bit word value and sets the measurement type to MEASUREMENT_TYPE_RAWWORD16. It is used for handling 16-bit data in various scenarios, such as digital communication or sensor data encoding.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>word16_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 16-bit word value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the 16-bit word value and the type set to MEASUREMENT_TYPE_RAWWORD16. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="516" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="516" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a69bcb1db80e8c869eb0b874a8fc92c2b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetWord32</definition>
+        <argsstring>(const uint32_t word32_val)</argsstring>
+        <name>SetWord32</name>
+        <param>
+          <type>const uint32_t</type>
+          <declname>word32_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets a 32-bit word value in a measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a 32-bit word value and sets the measurement type to MEASUREMENT_TYPE_RAWWORD32. It is used for handling 32-bit data in various applications, including data communication and sensor data processing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>word32_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 32-bit word value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the 32-bit word value and the type set to MEASUREMENT_TYPE_RAWWORD32. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="534" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="534" bodyend="539"/>
+      </memberdef>
+      <memberdef kind="function" id="CayenneTypes_8hpp_1a72d44920a58a443cf0c1007ec260f136" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref></type>
+        <definition>static Measurement_t CayenneLPP::SetFloat32</definition>
+        <argsstring>(const float float32_val)</argsstring>
+        <name>SetFloat32</name>
+        <param>
+          <type>const float</type>
+          <declname>float32_val</declname>
+        </param>
+        <briefdescription>
+<para>Sets a 32-bit floating-point value in a measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes a <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure with a 32-bit floating-point value and sets the measurement type to MEASUREMENT_TYPE_RAWFLOAT32. It is particularly used for handling floating-point data in scenarios where precise numerical values are essential, such as in scientific measurements or complex data processing tasks.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>float32_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 32-bit floating-point value to set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> A <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> structure initialized with the 32-bit floating-point value and the type set to MEASUREMENT_TYPE_RAWFLOAT32. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="553" column="33" bodyfile="src/CayenneTypes.hpp" bodystart="553" bodyend="558"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/CayenneLPP.hpp" line="27" column="1"/>
+  </compounddef>
+</doxygen>

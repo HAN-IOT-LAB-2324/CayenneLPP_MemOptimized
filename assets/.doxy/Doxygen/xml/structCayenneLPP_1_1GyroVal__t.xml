@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structCayenneLPP_1_1GyroVal__t" kind="struct" language="C++" prot="public">
+    <compoundname>CayenneLPP::GyroVal_t</compoundname>
+    <includes refid="CayenneTypes_8hpp" local="no">CayenneTypes.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCayenneLPP_1_1GyroVal__t_1a6356a9fc3aa4eb1c09288dd396678233" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CayenneLPP::GyroVal_t::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="108" column="18" bodyfile="src/CayenneTypes.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCayenneLPP_1_1GyroVal__t_1adabe14ef76d59c8fde680d1f1df649c2" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CayenneLPP::GyroVal_t::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="109" column="18" bodyfile="src/CayenneTypes.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCayenneLPP_1_1GyroVal__t_1a211c94270350a2c07e6257d2bd6a2145" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CayenneLPP::GyroVal_t::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="110" column="18" bodyfile="src/CayenneTypes.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents 3-axis gyroscopic values, for orientation or rotational motion detection. </para>
+    </detaileddescription>
+    <location file="src/CayenneTypes.hpp" line="106" column="5" bodyfile="src/CayenneTypes.hpp" bodystart="107" bodyend="111"/>
+    <listofallmembers>
+      <member refid="structCayenneLPP_1_1GyroVal__t_1a6356a9fc3aa4eb1c09288dd396678233" prot="public" virt="non-virtual"><scope>CayenneLPP::GyroVal_t</scope><name>x</name></member>
+      <member refid="structCayenneLPP_1_1GyroVal__t_1adabe14ef76d59c8fde680d1f1df649c2" prot="public" virt="non-virtual"><scope>CayenneLPP::GyroVal_t</scope><name>y</name></member>
+      <member refid="structCayenneLPP_1_1GyroVal__t_1a211c94270350a2c07e6257d2bd6a2145" prot="public" virt="non-virtual"><scope>CayenneLPP::GyroVal_t</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

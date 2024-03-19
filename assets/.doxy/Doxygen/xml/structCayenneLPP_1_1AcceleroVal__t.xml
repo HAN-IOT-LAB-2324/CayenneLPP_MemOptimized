@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structCayenneLPP_1_1AcceleroVal__t" kind="struct" language="C++" prot="public">
+    <compoundname>CayenneLPP::AcceleroVal_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCayenneLPP_1_1AcceleroVal__t_1af21ca158d69f090130b33f5fbff4a109" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CayenneLPP::AcceleroVal_t::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="120" column="18" bodyfile="src/CayenneTypes.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCayenneLPP_1_1AcceleroVal__t_1ae833b113ed21817fa491ac58533021e1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CayenneLPP::AcceleroVal_t::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="121" column="18" bodyfile="src/CayenneTypes.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCayenneLPP_1_1AcceleroVal__t_1ad94fa7e6d9236e575a532c3179b7b4d3" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CayenneLPP::AcceleroVal_t::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="122" column="18" bodyfile="src/CayenneTypes.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/CayenneTypes.hpp" line="118" column="5" bodyfile="src/CayenneTypes.hpp" bodystart="119" bodyend="123"/>
+    <listofallmembers>
+      <member refid="structCayenneLPP_1_1AcceleroVal__t_1af21ca158d69f090130b33f5fbff4a109" prot="public" virt="non-virtual"><scope>CayenneLPP::AcceleroVal_t</scope><name>x</name></member>
+      <member refid="structCayenneLPP_1_1AcceleroVal__t_1ae833b113ed21817fa491ac58533021e1" prot="public" virt="non-virtual"><scope>CayenneLPP::AcceleroVal_t</scope><name>y</name></member>
+      <member refid="structCayenneLPP_1_1AcceleroVal__t_1ad94fa7e6d9236e575a532c3179b7b4d3" prot="public" virt="non-virtual"><scope>CayenneLPP::AcceleroVal_t</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

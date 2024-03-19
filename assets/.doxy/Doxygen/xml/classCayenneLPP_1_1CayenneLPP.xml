@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classCayenneLPP_1_1CayenneLPP" kind="class" language="C++" prot="public">
+    <compoundname>CayenneLPP::CayenneLPP</compoundname>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>static_size</declname>
+        <defname>static_size</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCayenneLPP_1_1CayenneLPP_1a7c2e31876ed4b5af99c9412427cebd32" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CayenneLPP::CayenneLPP&lt; static_size &gt;::buffer[static_size]</definition>
+        <argsstring>[static_size]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+<para>This buffer is statically allocated in compile-time (thanks to the template class :) ) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="166" column="17" bodyfile="src/CayenneLPP.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCayenneLPP_1_1CayenneLPP_1a595493648025be4fe19fbf46bed2e301" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CayenneLPP::CayenneLPP&lt; static_size &gt;::maxsize</definition>
+        <argsstring></argsstring>
+        <name>maxsize</name>
+        <briefdescription>
+<para>The max amount of bytes that can be stored in this encoder class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="171" column="17" bodyfile="src/CayenneLPP.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCayenneLPP_1_1CayenneLPP_1ab631c3318c743386c5670ca6446f6db3" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CayenneLPP::CayenneLPP&lt; static_size &gt;::cursor</definition>
+        <argsstring></argsstring>
+        <name>cursor</name>
+        <briefdescription>
+<para>This points to the next free spot in the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="176" column="17" bodyfile="src/CayenneLPP.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCayenneLPP_1_1CayenneLPP_1a6dfb6e16e323fc6b16df8517e926ecdf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CayenneLPP::CayenneLPP&lt; static_size &gt;::CayenneLPP</definition>
+        <argsstring>()</argsstring>
+        <name>CayenneLPP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="43" column="9" bodyfile="src/CayenneLPP.hpp" bodystart="43" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classCayenneLPP_1_1CayenneLPP_1a94f332b843ea6333be5aa005e25e2723" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CayenneLPP::CayenneLPP&lt; static_size &gt;::~CayenneLPP</definition>
+        <argsstring>()</argsstring>
+        <name>~CayenneLPP</name>
+        <briefdescription>
+<para>Since this class is initialized statically, there is nothing to clean up. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="56" column="9" bodyfile="src/CayenneLPP.hpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classCayenneLPP_1_1CayenneLPP_1a38d69f999fe4fbd148c4fb3344bb044d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CayenneLPP::CayenneLPP&lt; static_size &gt;::reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reset the cursor back to zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="63" column="14" bodyfile="src/CayenneLPP.hpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classCayenneLPP_1_1CayenneLPP_1acffe3318d1e5c7cb3d9913902d4a33d1" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr uint8_t</type>
+        <definition>constexpr uint8_t CayenneLPP::CayenneLPP&lt; static_size &gt;::getSize</definition>
+        <argsstring>(void)</argsstring>
+        <name>getSize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This gets the amount of bytes currently stored in the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The amount of bytes stored </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="72" column="27" bodyfile="src/CayenneLPP.hpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classCayenneLPP_1_1CayenneLPP_1a0f96133f515fb28c51660493cb016c75" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr uint8_t *</type>
+        <definition>constexpr uint8_t* CayenneLPP::CayenneLPP&lt; static_size &gt;::getBuffer</definition>
+        <argsstring>(void)</argsstring>
+        <name>getBuffer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This gets a pointer to the statically allocated internal buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="81" column="27" bodyfile="src/CayenneLPP.hpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classCayenneLPP_1_1CayenneLPP_1afe2c93caba4f3600f6daf9dd6cb43c41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const uint8_t</type>
+        <definition>const uint8_t CayenneLPP::CayenneLPP&lt; static_size &gt;::setMeasurement</definition>
+        <argsstring>(const uint8_t channel, const Measurement_t *measurement)</argsstring>
+        <name>setMeasurement</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>channel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structCayenneLPP_1_1Measurement__t" kindref="compound">Measurement_t</ref> *</type>
+          <declname>measurement</declname>
+        </param>
+        <briefdescription>
+<para>Store a new measurement in the encoder buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The cursor position in the internal buffer </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="90" column="23" bodyfile="src/CayenneLPP.hpp" bodystart="90" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classCayenneLPP_1_1CayenneLPP_1a4d71c7a66d9d406bd428c6052b12d07f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const uint8_t</type>
+        <definition>const uint8_t CayenneLPP::CayenneLPP&lt; static_size &gt;::DetermineMeasurementSize</definition>
+        <argsstring>(const CayenneMeasurementType_t type)</argsstring>
+        <name>DetermineMeasurementSize</name>
+        <param>
+          <type>const CayenneMeasurementType_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>This function determines the package size needed for the different payload types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The payload type to get the size of </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>size of the payload type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneLPP.hpp" line="111" column="23" bodyfile="src/CayenneLPP.hpp" bodystart="111" bodyend="161"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/CayenneLPP.hpp" line="31" column="5" bodyfile="src/CayenneLPP.hpp" bodystart="32" bodyend="177"/>
+    <listofallmembers>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1a7c2e31876ed4b5af99c9412427cebd32" prot="private" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>buffer</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1a6dfb6e16e323fc6b16df8517e926ecdf" prot="public" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>CayenneLPP</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1ab631c3318c743386c5670ca6446f6db3" prot="private" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>cursor</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1a4d71c7a66d9d406bd428c6052b12d07f" prot="private" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>DetermineMeasurementSize</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1a0f96133f515fb28c51660493cb016c75" prot="public" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>getBuffer</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1acffe3318d1e5c7cb3d9913902d4a33d1" prot="public" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>getSize</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1a595493648025be4fe19fbf46bed2e301" prot="private" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>maxsize</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1a38d69f999fe4fbd148c4fb3344bb044d" prot="public" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>reset</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1afe2c93caba4f3600f6daf9dd6cb43c41" prot="public" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>setMeasurement</name></member>
+      <member refid="classCayenneLPP_1_1CayenneLPP_1a94f332b843ea6333be5aa005e25e2723" prot="public" virt="non-virtual"><scope>CayenneLPP::CayenneLPP</scope><name>~CayenneLPP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

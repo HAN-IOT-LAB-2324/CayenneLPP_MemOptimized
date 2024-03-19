@@ -1,0 +1,1798 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../api/">
+      
+      
+        <link rel="next" href="../annotated/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Complete Overview - CayenneIMP Encoder/Decoder</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#namespace-cayennelpp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CayenneIMP Encoder/Decoder" class="md-header__button md-logo" aria-label="CayenneIMP Encoder/Decoder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CayenneIMP Encoder/Decoder
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Complete Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CayenneIMP Encoder/Decoder" class="md-nav__button md-logo" aria-label="CayenneIMP Encoder/Decoder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    CayenneIMP Encoder/Decoder
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design_choices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design choices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Library API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Doxygen
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Doxygen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Complete Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Complete Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typedef-analoggpioval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef AnalogGPIOVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-barometricpressure_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef BarometricPressure_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-measurementdata_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      union MeasurementData_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-cayennemeasurementtype_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum CayenneMeasurementType_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-digitalgpioval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef DigitalGPIOVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-float32val_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Float32Val_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-luminosityval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef LuminosityVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-presenceval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef PresenceVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rawbitval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RawBitVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rawbyteval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RawByteVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-relativehumidity_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RelativeHumidity_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-temperatureval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef TemperatureVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-word16val_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Word16Val_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-word32val_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Word32Val_t
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Static Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-resetmeasurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      function ResetMeasurement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setacceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetAcceleration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setanaloginput" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetAnalogInput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setanalogoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetAnalogOutput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setbarometricpressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetBarometricPressure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setdigitalinput" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetDigitalInput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setdigitaloutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetDigitalOutput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setfloat32" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetFloat32
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setgps" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetGPS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setgyro" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetGyro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setluminosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetLuminosity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setpresence" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetPresence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setrawbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetRawBit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setrawbyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetRawByte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setrelativehumidity" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetRelativeHumidity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-settemperature" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetTemperature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setword16" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetWord16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setword32" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetWord32
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annotated/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Struct and Union List
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classCayenneLPP_1_1CayenneLPP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CayenneLPP Class
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../namespace_member_functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CayenneLPP Helper functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CayenneLPP_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CayenneLPP.hpp File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CayenneTypes_8hpp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CayenneTypes.hpp File
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Functions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-types-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Types Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Types Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typedef-analoggpioval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef AnalogGPIOVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-barometricpressure_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef BarometricPressure_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union-measurementdata_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      union MeasurementData_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enum-cayennemeasurementtype_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      enum CayenneMeasurementType_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-digitalgpioval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef DigitalGPIOVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-float32val_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Float32Val_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-luminosityval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef LuminosityVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-presenceval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef PresenceVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rawbitval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RawBitVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-rawbyteval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RawByteVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-relativehumidity_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef RelativeHumidity_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-temperatureval_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef TemperatureVal_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-word16val_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Word16Val_t
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typedef-word32val_t" class="md-nav__link">
+    <span class="md-ellipsis">
+      typedef Word32Val_t
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-static-functions-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Public Static Functions Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Public Static Functions Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-resetmeasurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      function ResetMeasurement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setacceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetAcceleration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setanaloginput" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetAnalogInput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setanalogoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetAnalogOutput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setbarometricpressure" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetBarometricPressure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setdigitalinput" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetDigitalInput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setdigitaloutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetDigitalOutput
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setfloat32" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetFloat32
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setgps" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetGPS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setgyro" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetGyro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setluminosity" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetLuminosity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setpresence" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetPresence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setrawbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetRawBit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setrawbyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetRawByte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setrelativehumidity" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetRelativeHumidity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-settemperature" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetTemperature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setword16" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetWord16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-setword32" class="md-nav__link">
+    <span class="md-ellipsis">
+      function SetWord32
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="namespace-cayennelpp">Namespace CayenneLPP</h1>
+<p><a href="../namespaces/"><strong>Namespace List</strong></a> <strong>&gt;</strong> <a href="./"><strong>CayenneLPP</strong></a></p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structCayenneLPP_1_1AcceleroVal__t/"><strong>AcceleroVal_t</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">class</td>
+<td style="text-align: left;"><a href="../classCayenneLPP_1_1CayenneLPP/"><strong>CayenneLPP</strong></a> &lt;static_size&gt;<br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structCayenneLPP_1_1GPSCoord__t/"><strong>GPSCoord_t</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structCayenneLPP_1_1GyroVal__t/"><strong>GyroVal_t</strong></a> <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">struct</td>
+<td style="text-align: left;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-types">Public Types</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">typedef uint16_t</td>
+<td style="text-align: left;"><a href="#typedef-analoggpioval_t"><strong>AnalogGPIOVal_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint16_t</td>
+<td style="text-align: left;"><a href="#typedef-barometricpressure_t"><strong>BarometricPressure_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">union</td>
+<td style="text-align: left;"><a href="#union-measurementdata_t"><strong>MeasurementData_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">enum</td>
+<td style="text-align: left;"><a href="#enum-cayennemeasurementtype_t"><strong>CayenneMeasurementType_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint8_t</td>
+<td style="text-align: left;"><a href="#typedef-digitalgpioval_t"><strong>DigitalGPIOVal_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef float</td>
+<td style="text-align: left;"><a href="#typedef-float32val_t"><strong>Float32Val_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint16_t</td>
+<td style="text-align: left;"><a href="#typedef-luminosityval_t"><strong>LuminosityVal_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint8_t</td>
+<td style="text-align: left;"><a href="#typedef-presenceval_t"><strong>PresenceVal_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint8_t</td>
+<td style="text-align: left;"><a href="#typedef-rawbitval_t"><strong>RawBitVal_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint8_t</td>
+<td style="text-align: left;"><a href="#typedef-rawbyteval_t"><strong>RawByteVal_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint16_t</td>
+<td style="text-align: left;"><a href="#typedef-relativehumidity_t"><strong>RelativeHumidity_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint16_t</td>
+<td style="text-align: left;"><a href="#typedef-temperatureval_t"><strong>TemperatureVal_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint16_t</td>
+<td style="text-align: left;"><a href="#typedef-word16val_t"><strong>Word16Val_t</strong></a>  <br></td>
+</tr>
+<tr>
+<td style="text-align: right;">typedef uint32_t</td>
+<td style="text-align: left;"><a href="#typedef-word32val_t"><strong>Word32Val_t</strong></a>  <br></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-static-functions">Public Static Functions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Type</th>
+<th style="text-align: left;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-resetmeasurement"><strong>ResetMeasurement</strong></a> () <br><em>Clears currently used Measurement struct with invalid data.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setacceleration"><strong>SetAcceleration</strong></a> (const float x, const float y, const float z) <br><em>Sets the acceleration values for the x, y, and z axes.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setanaloginput"><strong>SetAnalogInput</strong></a> (const float analog_input_val) <br><em>Sets the analog input value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setanalogoutput"><strong>SetAnalogOutput</strong></a> (const float analog_output_val) <br><em>Sets the analog output value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setbarometricpressure"><strong>SetBarometricPressure</strong></a> (const float barometric_pressure_val) <br><em>Sets the barometric pressure value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setdigitalinput"><strong>SetDigitalInput</strong></a> (const uint8_t digital_input_val) <br><em>Sets the digital input value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setdigitaloutput"><strong>SetDigitalOutput</strong></a> (const uint8_t digital_output_val) <br><em>Sets the digital output value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setfloat32"><strong>SetFloat32</strong></a> (const float float32_val) <br><em>Sets a 32-bit floating-point value in a measurement.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setgps"><strong>SetGPS</strong></a> (const float latitude, const float longitude, const float altitude) <br><em>Sets the GPS coordinates and altitude.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setgyro"><strong>SetGyro</strong></a> (const float x, const float y, const float z) <br><em>Sets the gyroscopic values for the x, y, and z axes.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setluminosity"><strong>SetLuminosity</strong></a> (const float luminosity_val) <br><em>Sets the luminosity value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setpresence"><strong>SetPresence</strong></a> (const uint8_t presence_val) <br><em>Sets the presence value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;">void</td>
+<td style="text-align: left;"><a href="#function-setrawbit"><strong>SetRawBit</strong></a> (const uint8_t raw_bit_val, <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> * prevMeasurement) <br><em>Sets a raw bit value in a measurement.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setrawbyte"><strong>SetRawByte</strong></a> (const uint8_t raw_byte_val) <br><em>Sets a raw byte value in a measurement.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setrelativehumidity"><strong>SetRelativeHumidity</strong></a> (const float humidity_val) <br><em>Sets the relative humidity value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-settemperature"><strong>SetTemperature</strong></a> (const float temperature_val) <br><em>Sets the temperature value.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setword16"><strong>SetWord16</strong></a> (const uint16_t word16_val) <br><em>Sets a 16-bit word value in a measurement.</em></td>
+</tr>
+<tr>
+<td style="text-align: right;"><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a></td>
+<td style="text-align: left;"><a href="#function-setword32"><strong>SetWord32</strong></a> (const uint32_t word32_val) <br><em>Sets a 32-bit word value in a measurement.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="public-types-documentation">Public Types Documentation</h2>
+<h3 id="typedef-analoggpioval_t">typedef AnalogGPIOVal_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">AnalogGPIOVal_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="typedef-barometricpressure_t">typedef BarometricPressure_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">BarometricPressure_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="union-measurementdata_t">union MeasurementData_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>
+</span></code></pre></div>
+<h3 id="enum-cayennemeasurementtype_t">enum CayenneMeasurementType_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">enum</span><span class="w"> </span><span class="nc">CayenneLPP</span><span class="o">::</span><span class="n">CayenneMeasurementType_t</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_INVALID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_DIGITAL_OUTPUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_DIGITAL_INPUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBIT_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">116</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBIT_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">117</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBIT_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">118</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBIT_4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">119</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBIT_5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBIT_6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBIT_7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">122</span><span class="p">,</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBIT_8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWBYTE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWWORD16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWWORD32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RAWFLOAT32</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_PRESENCE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_LUMINOSITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_ANALOG_OUTPUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_ANALOG_INPUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_TEMPERATURE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">103</span><span class="p">,</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_RELATIVE_HUMIDITY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">104</span><span class="p">,</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_BAROMETRIC_PRESSURE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">115</span><span class="p">,</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_ACCELERATION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">113</span><span class="p">,</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_GYRO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">134</span><span class="p">,</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">    </span><span class="n">MEASUREMENT_TYPE_GPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">136</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="p">};</span>
+</span></code></pre></div>
+<h3 id="typedef-digitalgpioval_t">typedef DigitalGPIOVal_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">DigitalGPIOVal_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="typedef-float32val_t">typedef Float32Val_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">Float32Val_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="typedef-luminosityval_t">typedef LuminosityVal_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">LuminosityVal_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="typedef-presenceval_t">typedef PresenceVal_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">PresenceVal_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="typedef-rawbitval_t">typedef RawBitVal_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">RawBitVal_t</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Represents a single bit value, often used in bit manipulation or status indication. </p>
+<h3 id="typedef-rawbyteval_t">typedef RawByteVal_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">RawByteVal_t</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Represents a raw byte value, typically used for byte-oriented data operations. </p>
+<h3 id="typedef-relativehumidity_t">typedef RelativeHumidity_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">RelativeHumidity_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="typedef-temperatureval_t">typedef TemperatureVal_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">TemperatureVal_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="typedef-word16val_t">typedef Word16Val_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">Word16Val_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="typedef-word32val_t">typedef Word32Val_t</h3>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">typedef</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">Word32Val_t</span><span class="p">;</span>
+</span></code></pre></div>
+<h2 id="public-static-functions-documentation">Public Static Functions Documentation</h2>
+<h3 id="function-resetmeasurement">function ResetMeasurement</h3>
+<p><em>Clears currently used Measurement struct with invalid data.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">ResetMeasurement</span><span class="w"> </span><span class="p">()</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with invalid data </p>
+<h3 id="function-setacceleration">function SetAcceleration</h3>
+<p><em>Sets the acceleration values for the x, y, and z axes.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetAcceleration</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with scaled acceleration values and sets the measurement type to MEASUREMENT_TYPE_ACCELERATION. The acceleration values are scaled by a factor of 1000 to convert them from floats to uint16_t, providing milli-g precision in their digital representation. It is used for capturing or simulating acceleration in various axes, typically in motion or orientation detection applications.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The acceleration value along the x-axis. </li>
+<li><code>y</code> The acceleration value along the y-axis. </li>
+<li><code>z</code> The acceleration value along the z-axis. These values are scaled by 1000 for precise milli-g representation. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the scaled acceleration values and the type set to MEASUREMENT_TYPE_ACCELERATION. </p>
+<h3 id="function-setanaloginput">function SetAnalogInput</h3>
+<p><em>Sets the analog input value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetAnalogInput</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">analog_input_val</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a scaled analog input value and sets the measurement type to MEASUREMENT_TYPE_ANALOG_INPUT. The analog input value is scaled by a factor of 100 to convert it from a float to a uint16_t for digital representation. It is used for capturing or simulating analog sensor readings.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>analog_input_val</code> The analog input value to set, as a floating-point number. This value is scaled by 100 to facilitate digital representation without losing precision. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the scaled analog input value and the type set to MEASUREMENT_TYPE_ANALOG_INPUT. </p>
+<h3 id="function-setanalogoutput">function SetAnalogOutput</h3>
+<p><em>Sets the analog output value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetAnalogOutput</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">analog_output_val</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a scaled analog output value and sets the measurement type to MEASUREMENT_TYPE_ANALOG_OUTPUT. The analog output value is scaled by a factor of 100 to convert it from a float to a uint16_t for digital representation. It is designed for controlling analog output devices or interfaces.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>analog_output_val</code> The analog output value to set, as a floating-point number. This value is scaled by 100 to facilitate digital representation without losing precision. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the scaled analog output value and the type set to MEASUREMENT_TYPE_ANALOG_OUTPUT. </p>
+<h3 id="function-setbarometricpressure">function SetBarometricPressure</h3>
+<p><em>Sets the barometric pressure value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetBarometricPressure</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">barometric_pressure_val</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a scaled barometric pressure value and sets the measurement type to MEASUREMENT_TYPE_BAROMETRIC_PRESSURE. The pressure value is scaled by a factor of 10 to convert it from a float to a uint16_t, providing a precision of 0.1 hPa (hectopascals) in its digital representation. It is used for atmospheric pressure monitoring in weather stations or environmental monitoring systems.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>barometric_pressure_val</code> The barometric pressure value to set, as a floating-point number. This value is scaled by 10 to provide a precision of 0.1 hPa. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the scaled barometric pressure value and the type set to MEASUREMENT_TYPE_BAROMETRIC_PRESSURE. </p>
+<h3 id="function-setdigitalinput">function SetDigitalInput</h3>
+<p><em>Sets the digital input value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetDigitalInput</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">digital_input_val</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with the given digital input value and sets the measurement type to MEASUREMENT_TYPE_DIGITAL_INPUT. It is primarily used for capturing or simulating the state of digital input pins in hardware abstraction layers.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>digital_input_val</code> The digital input value to set. This value is typically used to represent the state of a digital input, such as reading a pin as high (1) or low (0). </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the digital input value and the type set to MEASUREMENT_TYPE_DIGITAL_INPUT. </p>
+<h3 id="function-setdigitaloutput">function SetDigitalOutput</h3>
+<p><em>Sets the digital output value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetDigitalOutput</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">digital_output_val</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with the given digital output value and sets the measurement type to MEASUREMENT_TYPE_DIGITAL_OUTPUT. It is designed to be used for configuring or controlling digital output pins in hardware abstraction layers.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>digital_output_val</code> The digital output value to set. This value is typically used to control a digital output, such as setting a pin high (1) or low (0). </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the digital output value and the type set to MEASUREMENT_TYPE_DIGITAL_OUTPUT. </p>
+<h3 id="function-setfloat32">function SetFloat32</h3>
+<p><em>Sets a 32-bit floating-point value in a measurement.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetFloat32</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">float32_val</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a 32-bit floating-point value and sets the measurement type to MEASUREMENT_TYPE_RAWFLOAT32. It is particularly used for handling floating-point data in scenarios where precise numerical values are essential, such as in scientific measurements or complex data processing tasks.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>float32_val</code> The 32-bit floating-point value to set. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the 32-bit floating-point value and the type set to MEASUREMENT_TYPE_RAWFLOAT32. </p>
+<h3 id="function-setgps">function SetGPS</h3>
+<p><em>Sets the GPS coordinates and altitude.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetGPS</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">latitude</span><span class="p">,</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">longitude</span><span class="p">,</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">altitude</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with scaled GPS coordinate and altitude values and sets the measurement type to MEASUREMENT_TYPE_GPS. The latitude and longitude values are scaled by a factor of 10000, and the altitude by 100, converting them from floats to uint32_t for precise geographic positioning. It is used for tracking and navigation applications.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>latitude</code> The latitude value in degrees. </li>
+<li><code>longitude</code> The longitude value in degrees. </li>
+<li><code>altitude</code> The altitude value in meters. The latitude and longitude are scaled by 10000, and altitude by 100, for precise representation. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the scaled GPS values and the type set to MEASUREMENT_TYPE_GPS. </p>
+<h3 id="function-setgyro">function SetGyro</h3>
+<p><em>Sets the gyroscopic values for the x, y, and z axes.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetGyro</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="p">,</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="p">,</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">z</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with scaled gyroscopic values and sets the measurement type to MEASUREMENT_TYPE_GYRO. The gyro values are scaled by a factor of 100 to convert them from floats to uint16_t, aiming to maintain precision for angular velocity measurements. It is typically used in orientation and rotation detection systems.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>x</code> The gyro value along the x-axis. </li>
+<li><code>y</code> The gyro value along the y-axis. </li>
+<li><code>z</code> The gyro value along the z-axis. These values are scaled by 100 for digital representation. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the scaled gyro values and the type set to MEASUREMENT_TYPE_GYRO. </p>
+<h3 id="function-setluminosity">function SetLuminosity</h3>
+<p><em>Sets the luminosity value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetLuminosity</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">luminosity_val</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with the given luminosity value and sets the measurement type to MEASUREMENT_TYPE_LUMINOSITY. It is primarily used for monitoring or simulating light intensity levels in various applications, ranging from environmental sensing to smart lighting control.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>luminosity_val</code> The luminosity value to set. This value typically represents the intensity of light measured, using a specific unit such as lux. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the luminosity value and the type set to MEASUREMENT_TYPE_LUMINOSITY. </p>
+<h3 id="function-setpresence">function SetPresence</h3>
+<p><em>Sets the presence value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetPresence</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">presence_val</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with the given presence value and sets the measurement type to MEASUREMENT_TYPE_PRESENCE. It is designed to be used for representing the presence or absence of an object or entity, typically detected through sensors.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>presence_val</code> The presence value to set. This value is typically used to indicate the detection of presence (1) or absence (0) of an entity. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the presence value and the type set to MEASUREMENT_TYPE_PRESENCE. </p>
+<h3 id="function-setrawbit">function SetRawBit</h3>
+<p><em>Sets a raw bit value in a measurement.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetRawBit</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">raw_bit_val</span><span class="p">,</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="n">Measurement_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">prevMeasurement</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function updates the provided measurement with a new bit value, setting or appending it based on the previous measurement's type. It is used to incrementally build up a raw bit measurement from individual bits.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>raw_bit_val</code> The raw bit value to set or append. Only the least significant bit is used. </li>
+<li><code>prevMeasurement</code> Reference to the previous measurement which will be updated with the new bit value. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>void </p>
+<h3 id="function-setrawbyte">function SetRawByte</h3>
+<p><em>Sets a raw byte value in a measurement.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetRawByte</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">raw_byte_val</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a raw byte value and sets the measurement type to MEASUREMENT_TYPE_RAWBYTE. It is used for handling raw byte data in various data communication or storage scenarios.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>raw_byte_val</code> The raw byte value to set. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the raw byte value and the type set to MEASUREMENT_TYPE_RAWBYTE. </p>
+<h3 id="function-setrelativehumidity">function SetRelativeHumidity</h3>
+<p><em>Sets the relative humidity value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetRelativeHumidity</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">humidity_val</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a scaled relative humidity value and sets the measurement type to MEASUREMENT_TYPE_RELATIVE_HUMIDITY. The humidity value is scaled by a factor of 2 to convert it from a float to a uint16_t, aiming to maintain precision while accommodating the data type. It is used for humidity monitoring in environmental control systems.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>humidity_val</code> The relative humidity value to set, as a floating-point number. This value is scaled by 2 to adjust for the digital representation. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the scaled relative humidity value and the type set to MEASUREMENT_TYPE_RELATIVE_HUMIDITY. </p>
+<h3 id="function-settemperature">function SetTemperature</h3>
+<p><em>Sets the temperature value.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetTemperature</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">temperature_val</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a scaled temperature value and sets the measurement type to MEASUREMENT_TYPE_TEMPERATURE. The temperature value is scaled by a factor of 10 to convert it from a float to a uint16_t, allowing for a fraction of a degree precision in digital representation. It is used for temperature monitoring applications.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>temperature_val</code> The temperature value to set, as a floating-point number. This value is scaled by 10 to provide a precision of 0.1 degrees in its digital form. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the scaled temperature value and the type set to MEASUREMENT_TYPE_TEMPERATURE. </p>
+<h3 id="function-setword16">function SetWord16</h3>
+<p><em>Sets a 16-bit word value in a measurement.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetWord16</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">word16_val</span>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a 16-bit word value and sets the measurement type to MEASUREMENT_TYPE_RAWWORD16. It is used for handling 16-bit data in various scenarios, such as digital communication or sensor data encoding.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>word16_val</code> The 16-bit word value to set. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the 16-bit word value and the type set to MEASUREMENT_TYPE_RAWWORD16. </p>
+<h3 id="function-setword32">function SetWord32</h3>
+<p><em>Sets a 32-bit word value in a measurement.</em> 
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="k">static</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="n">Measurement_t</span><span class="w"> </span><span class="n">CayenneLPP</span><span class="o">::</span><span class="n">SetWord32</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">word32_val</span>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div></p>
+<p>This function initializes a <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure with a 32-bit word value and sets the measurement type to MEASUREMENT_TYPE_RAWWORD32. It is used for handling 32-bit data in various applications, including data communication and sensor data processing.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>word32_val</code> The 32-bit word value to set. </li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p><a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> A <a href="../structCayenneLPP_1_1Measurement__t/"><strong>Measurement_t</strong></a> structure initialized with the 32-bit word value and the type set to MEASUREMENT_TYPE_RAWWORD32. </p>
+<hr />
+<p>The documentation for this class was generated from the following file <code>src/CayenneLPP.hpp</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

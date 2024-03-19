@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structCayenneLPP_1_1Measurement__t" kind="struct" language="C++" prot="public">
+    <compoundname>CayenneLPP::Measurement_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCayenneLPP_1_1Measurement__t_1a0100b2e6abda385defef6d3f7b9c4892" prot="public" static="no" mutable="no">
+        <type>CayenneMeasurementType_t</type>
+        <definition>CayenneMeasurementType_t CayenneLPP::Measurement_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="194" column="34" bodyfile="src/CayenneTypes.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCayenneLPP_1_1Measurement__t_1ae0acab999450e27d5323fb81a4d490e6" prot="public" static="no" mutable="no">
+        <type><ref refid="unionCayenneLPP_1_1MeasurementData__t" kindref="compound">MeasurementData_t</ref></type>
+        <definition>MeasurementData_t CayenneLPP::Measurement_t::val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="195" column="27" bodyfile="src/CayenneTypes.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>CayenneLPP::GyroVal_t</label>
+        <link refid="structCayenneLPP_1_1GyroVal__t"/>
+      </node>
+      <node id="2">
+        <label>CayenneLPP::MeasurementData_t</label>
+        <link refid="unionCayenneLPP_1_1MeasurementData__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Acceleration</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>Gyro</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>GPS</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CayenneLPP::GPSCoord_t</label>
+        <link refid="structCayenneLPP_1_1GPSCoord__t"/>
+      </node>
+      <node id="3">
+        <label>CayenneLPP::AcceleroVal_t</label>
+        <link refid="structCayenneLPP_1_1AcceleroVal__t"/>
+      </node>
+      <node id="1">
+        <label>CayenneLPP::Measurement_t</label>
+        <link refid="structCayenneLPP_1_1Measurement__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/CayenneTypes.hpp" line="192" column="5" bodyfile="src/CayenneTypes.hpp" bodystart="193" bodyend="196"/>
+    <listofallmembers>
+      <member refid="structCayenneLPP_1_1Measurement__t_1a0100b2e6abda385defef6d3f7b9c4892" prot="public" virt="non-virtual"><scope>CayenneLPP::Measurement_t</scope><name>type</name></member>
+      <member refid="structCayenneLPP_1_1Measurement__t_1ae0acab999450e27d5323fb81a4d490e6" prot="public" virt="non-virtual"><scope>CayenneLPP::Measurement_t</scope><name>val</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

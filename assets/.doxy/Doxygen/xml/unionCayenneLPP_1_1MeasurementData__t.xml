@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="unionCayenneLPP_1_1MeasurementData__t" kind="union" language="C++" prot="public">
+    <compoundname>CayenneLPP::MeasurementData_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1a1b5d064008861f38eabbf8e9847b2eec" prot="public" static="no" mutable="no">
+        <type>RawBitVal_t</type>
+        <definition>RawBitVal_t CayenneLPP::MeasurementData_t::RawBit</definition>
+        <argsstring></argsstring>
+        <name>RawBit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="143" column="21" bodyfile="src/CayenneTypes.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1ac4dcea31314bf25f290d837f78c0650d" prot="public" static="no" mutable="no">
+        <type>RawByteVal_t</type>
+        <definition>RawByteVal_t CayenneLPP::MeasurementData_t::RawByte</definition>
+        <argsstring></argsstring>
+        <name>RawByte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="144" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1a89a69a2ab028234237bf08696739f682" prot="public" static="no" mutable="no">
+        <type>DigitalGPIOVal_t</type>
+        <definition>DigitalGPIOVal_t CayenneLPP::MeasurementData_t::DigitalGPIO</definition>
+        <argsstring></argsstring>
+        <name>DigitalGPIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="145" column="26" bodyfile="src/CayenneTypes.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1a5b8b502b396de1de4afa0b6f1b2e0d31" prot="public" static="no" mutable="no">
+        <type>PresenceVal_t</type>
+        <definition>PresenceVal_t CayenneLPP::MeasurementData_t::Presence</definition>
+        <argsstring></argsstring>
+        <name>Presence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="146" column="23" bodyfile="src/CayenneTypes.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1aa313a0d4bd6ddd4143f510d4a076ec01" prot="public" static="no" mutable="no">
+        <type>Word16Val_t</type>
+        <definition>Word16Val_t CayenneLPP::MeasurementData_t::Word16</definition>
+        <argsstring></argsstring>
+        <name>Word16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="147" column="21" bodyfile="src/CayenneTypes.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1adc3bded957715ad4eb3c2c1f518a74bc" prot="public" static="no" mutable="no">
+        <type>LuminosityVal_t</type>
+        <definition>LuminosityVal_t CayenneLPP::MeasurementData_t::Luminosity</definition>
+        <argsstring></argsstring>
+        <name>Luminosity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="148" column="25" bodyfile="src/CayenneTypes.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1a00c9f6489dc20e9a1693e651326733b0" prot="public" static="no" mutable="no">
+        <type>AnalogGPIOVal_t</type>
+        <definition>AnalogGPIOVal_t CayenneLPP::MeasurementData_t::AnalogGPIO</definition>
+        <argsstring></argsstring>
+        <name>AnalogGPIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="149" column="25" bodyfile="src/CayenneTypes.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1a9f3d14ed82dfdd3b0fcaf9c73f31e6a1" prot="public" static="no" mutable="no">
+        <type>TemperatureVal_t</type>
+        <definition>TemperatureVal_t CayenneLPP::MeasurementData_t::Temperature</definition>
+        <argsstring></argsstring>
+        <name>Temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="150" column="26" bodyfile="src/CayenneTypes.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1abb99d0374e07114f1656141959449678" prot="public" static="no" mutable="no">
+        <type>RelativeHumidity_t</type>
+        <definition>RelativeHumidity_t CayenneLPP::MeasurementData_t::RelativeHumidity</definition>
+        <argsstring></argsstring>
+        <name>RelativeHumidity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="151" column="28" bodyfile="src/CayenneTypes.hpp" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1abc1b4ba677bafce40fc13d70a80e017d" prot="public" static="no" mutable="no">
+        <type>BarometricPressure_t</type>
+        <definition>BarometricPressure_t CayenneLPP::MeasurementData_t::BarometricPressure</definition>
+        <argsstring></argsstring>
+        <name>BarometricPressure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="152" column="30" bodyfile="src/CayenneTypes.hpp" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1abbe7d57b7b4f76973988effd083f18d6" prot="public" static="no" mutable="no">
+        <type>Word32Val_t</type>
+        <definition>Word32Val_t CayenneLPP::MeasurementData_t::Word32</definition>
+        <argsstring></argsstring>
+        <name>Word32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="153" column="21" bodyfile="src/CayenneTypes.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1a88395471927953f23f3a7f3e3112c174" prot="public" static="no" mutable="no">
+        <type>Float32Val_t</type>
+        <definition>Float32Val_t CayenneLPP::MeasurementData_t::Float32</definition>
+        <argsstring></argsstring>
+        <name>Float32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="154" column="22" bodyfile="src/CayenneTypes.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1af0c6156f8f735d53712923d0b1b7a03e" prot="public" static="no" mutable="no">
+        <type><ref refid="structCayenneLPP_1_1GPSCoord__t" kindref="compound">GPSCoord_t</ref></type>
+        <definition>GPSCoord_t CayenneLPP::MeasurementData_t::GPS</definition>
+        <argsstring></argsstring>
+        <name>GPS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="155" column="20" bodyfile="src/CayenneTypes.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1aaf6c2aab53d3b26b86056b6d9b1c6714" prot="public" static="no" mutable="no">
+        <type><ref refid="structCayenneLPP_1_1AcceleroVal__t" kindref="compound">AcceleroVal_t</ref></type>
+        <definition>AcceleroVal_t CayenneLPP::MeasurementData_t::Acceleration</definition>
+        <argsstring></argsstring>
+        <name>Acceleration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="156" column="23" bodyfile="src/CayenneTypes.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1a6435abe9d7071227dd119f4ea3cf81e2" prot="public" static="no" mutable="no">
+        <type><ref refid="structCayenneLPP_1_1GyroVal__t" kindref="compound">GyroVal_t</ref></type>
+        <definition>GyroVal_t CayenneLPP::MeasurementData_t::Gyro</definition>
+        <argsstring></argsstring>
+        <name>Gyro</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="157" column="19" bodyfile="src/CayenneTypes.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionCayenneLPP_1_1MeasurementData__t_1a31e67e33643455e8b52097c52fdcddcb" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CayenneLPP::MeasurementData_t::RawBytes[CAYENNE_MAX_UNION_SIZE]</definition>
+        <argsstring>[CAYENNE_MAX_UNION_SIZE]</argsstring>
+        <name>RawBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/CayenneTypes.hpp" line="158" column="17" bodyfile="src/CayenneTypes.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>CayenneLPP::GyroVal_t</label>
+        <link refid="structCayenneLPP_1_1GyroVal__t"/>
+      </node>
+      <node id="1">
+        <label>CayenneLPP::MeasurementData_t</label>
+        <link refid="unionCayenneLPP_1_1MeasurementData__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Acceleration</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Gyro</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>GPS</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CayenneLPP::GPSCoord_t</label>
+        <link refid="structCayenneLPP_1_1GPSCoord__t"/>
+      </node>
+      <node id="2">
+        <label>CayenneLPP::AcceleroVal_t</label>
+        <link refid="structCayenneLPP_1_1AcceleroVal__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/CayenneTypes.hpp" line="141" column="5" bodyfile="src/CayenneTypes.hpp" bodystart="142" bodyend="159"/>
+    <listofallmembers>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1aaf6c2aab53d3b26b86056b6d9b1c6714" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>Acceleration</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1a00c9f6489dc20e9a1693e651326733b0" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>AnalogGPIO</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1abc1b4ba677bafce40fc13d70a80e017d" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>BarometricPressure</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1a89a69a2ab028234237bf08696739f682" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>DigitalGPIO</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1a88395471927953f23f3a7f3e3112c174" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>Float32</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1af0c6156f8f735d53712923d0b1b7a03e" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>GPS</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1a6435abe9d7071227dd119f4ea3cf81e2" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>Gyro</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1adc3bded957715ad4eb3c2c1f518a74bc" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>Luminosity</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1a5b8b502b396de1de4afa0b6f1b2e0d31" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>Presence</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1a1b5d064008861f38eabbf8e9847b2eec" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>RawBit</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1ac4dcea31314bf25f290d837f78c0650d" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>RawByte</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1a31e67e33643455e8b52097c52fdcddcb" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>RawBytes</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1abb99d0374e07114f1656141959449678" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>RelativeHumidity</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1a9f3d14ed82dfdd3b0fcaf9c73f31e6a1" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>Temperature</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1aa313a0d4bd6ddd4143f510d4a076ec01" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>Word16</name></member>
+      <member refid="unionCayenneLPP_1_1MeasurementData__t_1abbe7d57b7b4f76973988effd083f18d6" prot="public" virt="non-virtual"><scope>CayenneLPP::MeasurementData_t</scope><name>Word32</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
